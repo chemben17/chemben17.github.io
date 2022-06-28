@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="Chemben">
+    <meta name="Description" content="Chemben Coffee store can be contacted through the details on this page. The office phone number and other neccessary ones are available on the page. Also, the office address is also available to get. Our respondant are friendly, do well to reach out to them.">
+    <link rel="icon" href="./download.png" type="image/ x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- The Title of the document. This is what is gonna be dsiplayed at the URl name -->
+    <title>Chemben Coffee Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <!-- The image of the Logo. Since we are designing a coffee store website. we used a plain coffee image logo -->
+    <!-- Often times when the image does not involve a caption , it is better to use picture instead of figure. But when a caption is involves, used figure-->
+    <picture>
+        <img id="logo" src="./images/Coffee-Cup-Icon-png-transparent.png" width="100" alt="Coffee Cup" loading="lazy">
+        <!-- what lazy does to the atrributes loading is that it allows us to safe the tme for the page, meaning that the page loads faster than if it was set to eager. There are two possible values for loading. -->
+    </picture>
+    <span class="material-symbols-outlined">
+star
+</span>
+<a href="https://fonts.google.com/icons" aria-label="Fonts-Google"><span class="material-symbols-outlined">
+zoom_in
+</span></a>
+
+
+
+    <br> 
+    <!-- Here are the unordered list of what can be accessed from the home page. The list are a form of hyperlinks in themselves. So they link us to some page  -->
+    <h1 id="Coffee Shop">Coffee Shop</h1>
+    <nav>
+        <ul class="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="numbers.html">Numbers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+<hr>
+<div>
+<figure>
+     <!-- The backgroud image in the page, just after the unordered list  -->
+    <img src="./images/BAckgroud.jpeg" width="100%" alt="Coffee image" loading="lazy">
+    <br> <br>
+
+    <img src="./download.png" alt=" an icon of coffee" title="An icon of coffee" width="50%" height="50%" loading="lazy">
+    <figcaption>A coffe cup logo designed by Figma</figcaption>
+</figure>
+</div>
+    <!-- The main heading is h1 -->
+<main>
+    <article>
+        <section>
+            <h2>Contact Us</h2>
+    <!-- The contact form to be filled. The action signifies where the details filled are going and the "method also signifies how  to go about it" -->
+            <form action="https://httpbin.org/get" method="get">
+        <!-- The name form with "Label" to indicate what to fill. Attributes of label are also important, the "for" must tally with the id in the input.    -->
+        
+        <fieldset>
+        <legend>Personal information</legend>
+               <p> <strong><label for="name">First Name:</label></strong>
+                <!--  TThe name input here is what the backend server will get with what was filled. so a name that mathes wht is expected to be filled must be written so as not to confuse the backend server -->
+                <input type="text" name="FirstName" id="name" placeholder="e.g Joseph" autocomplete="on" required autofocus> 
+                </p>
+                 <p><strong><label for="name">Middle-Name:</label></strong>
+                <!--  TThe name input here is what the backend server will get with what was filled. so a name that mathes wht is expected to be filled must be written so as not to confuse the backend server -->
+                <input type="text" name="Middle-Name" id="name" autocomplete="on" placeholder="Ayomide"> 
+                    </p>
+                    <!-- Pay much attention to the use of placeholders, required and autocomplete. -->
+                    <p><b><label for="name">Last Name:</label></b>
+                    <input type="text" name="Last Name" id="name" required autocomplete="family-name" placeholder="Adedokun"></p>
+        <!-- Email form with Label that indicate "Email" -->
+                <p><strong><label for="email">Email:</label></strong>
+                <input type="email" name="Email" id="email" required autocomplete="email" value="@gmail.com" > </p>
+
+
+               <p> <label for="Phone number">Phone number:</label>
+                <input type="tel" name="Phone number" id="Phone number" placeholder="e.g +2348038981315" autocomplete="on" required minlength="14" maxlength="15"> </p>
+                <!-- There is quite some little diffreneces between the use of number and tel. in number, only number input is allowed and also, there are some attriibutes that are only allowed in number  -->
+               <p> <label for="digit">Year of Membership:</label>
+                <input type="number" name="Year of memebership" id="digit" required min="1983" max="2022" step="1" value="1983"></p>
+                 </fieldset>
+                 <br>
+                 <fieldset>
+                    <legend>Coffee Preference</legend>
+                <p>
+                    <!-- The use of options was adopted to group our coffee into categories. this svery useful in grouping and also when we our options belong to different categories. -->
+                    <label for="coffee">Best Coffee choice</label>
+                    <select name="Best Coffee choice" id="coffee">
+                        <optgroup label="Espresso">
+                        <option value="Home Blend coffee">Home Blend Coffee</option>
+                        <option value="French Toast">French Toast</option>
+                        </optgroup>
+                        <optgroup label="Long Black">
+                        <option value="Columbia Roast">Columbia Roast</option>
+                        <option value="Columbia Roast">Normal Coffee</option>
+                        </optgroup>
+                        <optgroup label="Mezoo Mezzo">
+                        <option value="Columbia Roast" selected>Any Type</option>
+                        </optgroup>
+                        <option value="Columbia Roast">Others</option>
+                    </select>
+
+                </p>
+                                <p>
+                    <!--  This is the best option for multiple select options. e.g selecting your university from all the university in Nigeria or in the world or your Name amidst 500 names. This is so because it allows us to narrow down our option by just typing the name. -->
+                    <strong><label for="coffee">Favourite Coffee:</label></strong>
+                <input type="text" name="Favourite Coffee" id="coffee" list="Coffe-list"  required autocomplete="on" placeholder="select your University"> 
+            <datalist id="Coffe-list" >
+                <option value="Espresso">
+                <option value="Doppio">
+                <option value="Ristretto">
+                <option value="Short Macchiato">
+                <option value="Cappuccino">
+                <option value="Long Macchiato">
+                <option value="Mezzo Mezzo">
+            </datalist>
+            </p>
+           </fieldset>
+            <br>
+        <!-- paragraph was used for this description indicator and involves the placeholder to guide the user -->
+        <fieldset>
+            <legend> Your opinion</legend>
+            <p> What things do you think the Coffee store needs to improve on</p>
+            <textarea name="Description" placeholder="Your suggestion are taken very important and will be worked upon." id="" cols="35" rows="10" required ></textarea>
+            </fieldset>
+        <br>
+        <br>
+        <!-- The botton type key(one of the many options for this) -->
+            <button type="submit">Submit</button>
+            
+            </form>
+            <!-- The use of description list and other properties included such as dt (The description term) and also the dd (The description details) -->
+        </section>
+        <hr>
+        <section>
+            <h2> Few description on the type of Coffee we deal with</h2>
+<dl>
+    <dt>CHemical Engineering</dt>
+    <dd>This branch of engineering is such a lucrative one vast at that. If one will known as well in this field, you need to be such a bright student and a brilliant one at that</dd>
+    <dt>Mechanical Engineering</dt>
+    <dd>This is such an old branch of Enginnering dated back inro the waves made by men in this fireld years back</dd>
+</dl>
+   </section>
+ <hr>
+    <aside>
+        <h2>Amazing quotes from Coffee lovers</h2>
+    <details>
+        <summary>
+            These are various quotes from lover sof coffee. I'm sure you're gonna love it and we are open to quotes from you as well. 
+        </summary>
+        <figure>
+        <blockquote cite="https://www.goodreads.com/quotes/tag/coffee-lovers">What gies best with a cup of coffee? Another cup. 
+    <!-- Instead of using blockquotes, if the quotes is such a short one, ne can go with the inline elements <q>. -->
+        </blockquote>
+        <figcaption> Henry Rollins, <cite>A Gentleman in Moscow</cite></figcaption>
+    <hr>
+        <blockquote cite="https://www.goodreads.com/quotes/tag/coffee-lovers"> 
+        <p> Life is like a coffee, the darker it gets, the more it energies </p> 
+          <!-- djklkklklklkl -->
+        </blockquote>
+        <blockquote cite="https://www.goodreads.com/quotes/tag/coffee-lovers"><p> What doesn't kill me makes me strongrer, except for the extincion of Coffee......&#128562; that might  kill me &#128552; </p>
+        <figcaption> Tanya Masse, <cite> Coffee fears.
+        </cite>
+        </figcaption>
+        </blockquote>
+<hr>
+        <blockquote cite="https://www.goodreads.com/quotes/tag/coffee-lovers"><p>Coffee is thr dawn, with books open likr our hearts, our weekend ritual</p>
+        <figcaption>Eric Overby, <cite> 17: Haiku Poems.
+        </cite>
+        </figcaption>
+        </blockquote>
+        <blockquote cite="https://www.goodreads.com/quotes/tag/coffee-lovers"><p>The Lord must have created coffee to reward humans for those bad times they sometimes have on Earth. Having charged your heart and brain with a cup of coffee, you're ready to face the challenges of life. A good cup of coffee makes life seem better.</p>
+        <figcaption> Sahara Sanders <cite>INDIGO DIARIES: A Series of Novels.
+        </cite>
+        </figcaption>
+        </blockquote>  
+    </figure>
+   </details>
+      </aside>
+    
+<hr>
+<section>
+    <h2> For physical Visitation</h2>
+    <details>
+        <summary>
+            You can reach out the office on the days indicated also the time indicated.(It is advisable to follow through the instrucions here so as to be ablr to get to us quickly).
+        </summary>
+        <p> Monday: 9am - 4pm  <br>
+            Wednesday: 10am - 3pm <br>
+            friday: 8am - 2pm
+         </p> 
+     </section>
+         </article>
+    </main>
+         
+    </details> <br>
+    <hr>
+    <a href="/">Back to the home page</a>
+
+<p> You can dowload my cercificate here <a href="./Learn HTML – Full Tutorial for Beginners (2022).mp4" download>certificate</a></p>
+<p>You also can call me <a href="tel:+2348133046767"> on my mobile</a></p>
+<p> <a href="./Learn HTML – Full Tutorial for Beginners (2022).mp4" download="A complete tutorial guide for HTML video">download the movie</a></p>
+
+
+    <hr>
+    <address id="address">
+        Plot 10, olaibrahim close, <br>
+        Olomi <br>
+        Ibadan, Oyo state <br>
+        Nigeria. <br>
+        Tel: +2348133046767 <br>
+        Email: docbenjamen@gmail.com
+    </address>
+            <br>
+        <footer>
+            <!-- The copyright symbol is included -->
+            <p>copyright&copy;2022</p>
+            <!-- A link that allows us to go back to the top is included. -->
+           <strong> <a href="#logo">Back to top</a></strong>
+        </footer>
+        <video src="./Learn HTML – Full Tutorial for Beginners (2022).mp4" loading="lazy" width="50%" height="50%" autoplay loop controls muted 10x></video>
+</body>
+</html>
+
+<iframe width="836" height="480" src="https://www.youtube.com/embed/1SXy-ew6N8A" title="Petr Cech LEAVES Chelsea! | Chelsea Prepare SECOND Sterling Bid | Dembele Contract Decision?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+https://youtu.be/1SXy-ew6N8A?t=794
+
+
+<!--  -->
